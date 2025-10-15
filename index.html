@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learning is hard</title>
+  <!-- Importa Vue 3 desde CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <h1>Vue Básico</h1>
+  <div id="app">
+    <p>{{ mensaje }}</p>
+    <input v-model="mensaje" placeholder="Escribe algo...">
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          mensaje: '¡Hola, Vue!'
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
